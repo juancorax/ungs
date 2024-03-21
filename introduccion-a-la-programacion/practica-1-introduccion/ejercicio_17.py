@@ -11,10 +11,18 @@
 cantidadDeDineroDeseada = int(input("Ingrese la cantidad de dinero deseada\n"))
 
 cantidadBilletes2000 = cantidadDeDineroDeseada // 2000
-cantidadBilletes1000 = (cantidadDeDineroDeseada % 2000) // 1000
-cantidadBilletes500 = (cantidadDeDineroDeseada % 1000) // 500
-cantidadBilletes200 = (cantidadDeDineroDeseada % 500) // 200
-cantidadBilletes100 = cantidadDeDineroDeseada % 100
+restoDeDinero = cantidadDeDineroDeseada % 2000
+
+cantidadBilletes1000 = restoDeDinero // 1000
+restoDeDinero = restoDeDinero % 1000
+
+cantidadBilletes500 = restoDeDinero // 500
+restoDeDinero = restoDeDinero % 500
+
+cantidadBilletes200 = restoDeDinero // 200
+restoDeDinero = restoDeDinero % 200
+
+cantidadBilletes100 = restoDeDinero // 100
 
 print("La cantidad de billetes de $2000 es de " + str(cantidadBilletes2000))
 print("La cantidad de billetes de $1000 es de " + str(cantidadBilletes1000))

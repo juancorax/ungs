@@ -8,9 +8,14 @@
 cantidadDeSegundos = int(input("Ingrese un lapso de tiempo expresado en segundos:\n"))
 
 diasQueRepresenta = cantidadDeSegundos // 86400
-horasQueRepresenta = (cantidadDeSegundos % 86400) // 3600
-minutosQueRepresenta = (cantidadDeSegundos % 3600) // 60
-segundosQueRepresenta = cantidadDeSegundos % 60
+restoDeSegundos = cantidadDeSegundos % 86400
+
+horasQueRepresenta = restoDeSegundos // 3600
+restoDeSegundos = restoDeSegundos % 3600
+
+minutosQueRepresenta = restoDeSegundos // 60
+
+segundosQueRepresenta = restoDeSegundos % 60
 
 print(
     str(diasQueRepresenta)
