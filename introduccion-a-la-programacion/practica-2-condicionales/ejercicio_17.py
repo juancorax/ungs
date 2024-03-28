@@ -10,6 +10,8 @@ b = int(input("Ingrese el coeficiente 'b':\n"))
 
 if a == 0:
     print("No tiene solución")
+elif b == 0:
+    print("Todos los números reales son solución")
 else:
     x = -(b / a)
     print("x =", x)
